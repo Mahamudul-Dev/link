@@ -7,7 +7,7 @@ import 'package:link/widgets/random_call_settings_sheet.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
 
 class RandomCallScreen extends StatefulWidget {
-  RandomCallScreen({super.key});
+  RandomCallScreen() : super();
 
   @override
   State<RandomCallScreen> createState() => _RandomCallScreenState();

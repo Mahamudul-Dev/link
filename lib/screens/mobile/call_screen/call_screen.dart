@@ -8,7 +8,7 @@ import 'package:link/styles/link_colors.dart';
 class CallScreen extends StatelessWidget {
   final avater;
   final username;
-  const CallScreen({super.key, required this.avater, required this.username});
+  const CallScreen({required this.avater, required this.username}) : super();
 
   @override
   Widget build(BuildContext context) {
@@ -17,9 +17,9 @@ class CallScreen extends StatelessWidget {
         const SizedBox(
           height: 50,
         ),
-        const Row(
+        Row(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
+          children: const [
             Icon(
               Icons.lock,
               size: 20,

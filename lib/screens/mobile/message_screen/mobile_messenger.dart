@@ -4,7 +4,7 @@ import 'package:link/widgets/searchbar.dart';
 import 'package:link/widgets/user_card.dart';
 
 class MessengerScreen extends StatelessWidget {
-  const MessengerScreen({super.key});
+  const MessengerScreen() : super();
 
   @override
   Widget build(BuildContext context) {

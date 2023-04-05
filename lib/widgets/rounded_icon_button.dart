@@ -4,10 +4,8 @@ class RoundedIconButton extends StatelessWidget {
   final Color color, iconColor;
   final IconData icon;
   const RoundedIconButton(
-      {super.key,
-      required this.color,
-      required this.iconColor,
-      required this.icon});
+      {required this.color, required this.iconColor, required this.icon})
+      : super();
 
   @override
   Widget build(BuildContext context) {

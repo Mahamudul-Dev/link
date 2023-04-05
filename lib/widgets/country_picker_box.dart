@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:link/styles/link_colors.dart';
 
 class CountryPickerField extends StatefulWidget {
-  const CountryPickerField({super.key});
+  const CountryPickerField() : super();
 
   @override
   State<CountryPickerField> createState() => _CountryPickerFieldState();

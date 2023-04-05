@@ -4,8 +4,8 @@ import 'package:link/styles/link_colors.dart';
 class SenderMessegeCard extends StatelessWidget {
   final String message;
   final String time;
-  const SenderMessegeCard(
-      {super.key, required this.message, required this.time});
+  const SenderMessegeCard({required this.message, required this.time})
+      : super();
 
   @override
   Widget build(BuildContext context) {

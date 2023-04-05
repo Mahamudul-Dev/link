@@ -4,7 +4,7 @@ import 'package:link/styles/link_colors.dart';
 class SearchBar extends StatelessWidget {
   var onAddTap;
   var onSearchTap;
-  SearchBar({super.key, required this.onAddTap, required this.onSearchTap});
+  SearchBar({required this.onAddTap, required this.onSearchTap}) : super();
 
   @override
   Widget build(BuildContext context) {

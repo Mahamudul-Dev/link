@@ -3,7 +3,7 @@ import 'package:link/screens/web/web_chat_screen.dart';
 import 'package:link/screens/web/web_messenger.dart';
 
 class WebScreenHolder extends StatelessWidget {
-  const WebScreenHolder({super.key});
+  const WebScreenHolder() : super();
 
   @override
   Widget build(BuildContext context) {

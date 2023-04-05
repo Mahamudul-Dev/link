@@ -4,7 +4,7 @@ import 'package:link/data/profile.dart';
 import 'package:link/styles/link_colors.dart';
 
 class ProfileBar extends StatelessWidget {
-  const ProfileBar({super.key});
+  const ProfileBar() : super();
 
   @override
   Widget build(BuildContext context) {

@@ -5,7 +5,7 @@ import 'package:link/styles/link_colors.dart';
 import 'package:link/widgets/friend_list.dart';
 
 class FriendListScreen extends StatelessWidget {
-  const FriendListScreen({super.key});
+  const FriendListScreen() : super();
 
   @override
   Widget build(BuildContext context) {

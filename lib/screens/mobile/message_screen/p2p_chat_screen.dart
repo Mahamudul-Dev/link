@@ -9,7 +9,7 @@ import 'package:link/widgets/message_view.dart';
 
 class P2PChatScreen extends StatelessWidget {
   final Chat chat;
-  const P2PChatScreen({super.key, required this.chat});
+  const P2PChatScreen({required this.chat}) : super();
 
   @override
   Widget build(BuildContext context) {
@@ -113,8 +113,8 @@ Widget buildProfileSheet(Chat chat) {
         padding: const EdgeInsets.symmetric(horizontal: 20.0),
         child: Column(
           children: [
-            const Row(
-              children: [
+            Row(
+              children: const [
                 Text(
                   'About: ',
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),

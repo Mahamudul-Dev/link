@@ -6,7 +6,7 @@ import 'package:link/widgets/rounded_icon_button.dart';
 
 class FriendList extends StatelessWidget {
   final bool isCallScreen;
-  const FriendList({super.key, required this.isCallScreen});
+  const FriendList({required this.isCallScreen}) : super();
 
   @override
   Widget build(BuildContext context) {

@@ -5,7 +5,8 @@ import 'package:link/styles/link_colors.dart';
 import 'package:link/widgets/country_picker_box.dart';
 
 class RandomCallSettingsSheet extends StatelessWidget {
-  const RandomCallSettingsSheet({super.key, required this.controller});
+  const RandomCallSettingsSheet({Key? key, required this.controller})
+      : super(key: key);
   final RandomCallController controller;
   @override
   Widget build(BuildContext context) {
@@ -60,7 +61,7 @@ class RandomCallSettingsSheet extends StatelessWidget {
                               );
                             }).toList(),
                             onChanged: (value) {
-                              controller.defaultAgeStart.value = value!;
+                              controller.defaultAgeStart.value = value as int;
                             });
                       }),
                     ),
@@ -91,7 +92,7 @@ class RandomCallSettingsSheet extends StatelessWidget {
                               );
                             }).toList(),
                             onChanged: (value) {
-                              controller.defaultAgeEnd.value = value!;
+                              controller.defaultAgeEnd.value = value as int;
                             });
                       }),
                     ),
@@ -142,7 +143,7 @@ class RandomCallSettingsSheet extends StatelessWidget {
                               );
                             }).toList(),
                             onChanged: (value) {
-                              controller.defaultGender.value = value!;
+                              controller.defaultGender.value = value.toString();
                             });
                       }),
                     ),
@@ -169,9 +170,9 @@ class RandomCallSettingsSheet extends StatelessWidget {
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(15.0),
                               color: electricPurple),
-                          child: const Row(
+                          child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
+                            children: const [
                               Icon(
                                 Icons.search_rounded,
                                 color: platinum,

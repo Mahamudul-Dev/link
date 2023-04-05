@@ -12,7 +12,7 @@ import 'package:link/screens/mobile/profile_screen/profile_screen.dart';
 import 'package:link/styles/link_colors.dart';
 
 class MobileScreenHolder extends StatefulWidget {
-  const MobileScreenHolder({super.key});
+  const MobileScreenHolder() : super();
 
   @override
   State<MobileScreenHolder> createState() => _MobileScreenHolderState();

@@ -6,7 +6,7 @@ import 'package:link/data/chat.dart';
 import 'package:link/styles/link_colors.dart';
 
 class ChatList extends StatelessWidget {
-  const ChatList({super.key});
+  const ChatList() : super();
 
   @override
   Widget build(BuildContext context) {

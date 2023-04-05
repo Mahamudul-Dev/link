@@ -6,7 +6,7 @@ class ChatBar extends StatelessWidget {
   final String profilePic;
   final String name;
 
-  const ChatBar({super.key, required this.profilePic, required this.name});
+  const ChatBar({required this.profilePic, required this.name}) : super();
 
   @override
   Widget build(BuildContext context) {

@@ -8,7 +8,7 @@ import 'package:link/widgets/rounded_icon_button.dart';
 import 'package:link/widgets/searchbar.dart';
 
 class CallHistoryScreen extends StatelessWidget {
-  const CallHistoryScreen({super.key});
+  const CallHistoryScreen() : super();
 
   @override
   Widget build(BuildContext context) {

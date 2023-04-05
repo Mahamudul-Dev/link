@@ -6,7 +6,7 @@ import 'package:link/widgets/sender_message_card.dart';
 
 class MessageView extends StatelessWidget {
   final Chat chat;
-  const MessageView({super.key, required this.chat});
+  const MessageView({required this.chat}) : super();
 
   @override
   Widget build(BuildContext context) {

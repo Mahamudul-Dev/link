@@ -4,7 +4,7 @@ import 'package:link/styles/link_colors.dart';
 class MyMessegeCard extends StatelessWidget {
   final String message;
   final String time;
-  const MyMessegeCard({super.key, required this.message, required this.time});
+  const MyMessegeCard({required this.message, required this.time}) : super();
 
   @override
   Widget build(BuildContext context) {

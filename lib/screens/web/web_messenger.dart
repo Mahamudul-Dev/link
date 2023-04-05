@@ -4,7 +4,7 @@ import 'package:link/widgets/searchbar.dart';
 import 'package:link/widgets/web/profile_bar.dart';
 
 class WebMessenger extends StatelessWidget {
-  const WebMessenger({super.key});
+  const WebMessenger() : super();
 
   @override
   Widget build(BuildContext context) {

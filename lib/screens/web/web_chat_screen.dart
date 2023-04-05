@@ -6,7 +6,7 @@ import 'package:link/styles/link_colors.dart';
 import 'package:link/widgets/chat_bar.dart';
 
 class WebChatScreen extends StatelessWidget {
-  const WebChatScreen({super.key});
+  const WebChatScreen() : super();
 
   @override
   Widget build(BuildContext context) {

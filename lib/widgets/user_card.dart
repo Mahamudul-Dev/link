@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:link/data/profile.dart';
 
 class UserCard extends StatelessWidget {
-  const UserCard({super.key});
+  const UserCard() : super();
 
   @override
   Widget build(BuildContext context) {

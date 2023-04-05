@@ -4,7 +4,7 @@ import 'package:link/data/profile.dart';
 import 'package:link/styles/link_colors.dart';
 
 class ProfileScreen extends StatelessWidget {
-  const ProfileScreen({super.key});
+  const ProfileScreen() : super();
 
   @override
   Widget build(BuildContext context) {
@@ -73,11 +73,11 @@ class ProfileScreen extends StatelessWidget {
           onClosing: () {},
           builder: (context) {
             return ListView(
-              children: const [
+              children: [
                 Row(
                   children: [
                     Column(
-                      children: [
+                      children: const [
                         Icon(Icons.people_alt_rounded),
                         SizedBox(height: 8.0),
                         Text('200 +')
