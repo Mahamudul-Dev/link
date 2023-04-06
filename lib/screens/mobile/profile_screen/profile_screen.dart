@@ -74,8 +74,26 @@ class ProfileScreen extends StatelessWidget {
           builder: (context) {
             return ListView(
               children: [
+                const SizedBox(
+                  height: 25,
+                ),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
+                    Column(
+                      children: const [
+                        Icon(Icons.people_alt_rounded),
+                        SizedBox(height: 8.0),
+                        Text('200 +')
+                      ],
+                    ),
+                    Column(
+                      children: const [
+                        Icon(Icons.people_alt_rounded),
+                        SizedBox(height: 8.0),
+                        Text('200 +')
+                      ],
+                    ),
                     Column(
                       children: const [
                         Icon(Icons.people_alt_rounded),
@@ -84,7 +102,29 @@ class ProfileScreen extends StatelessWidget {
                       ],
                     )
                   ],
-                )
+                ),
+                const SizedBox(
+                  height: 25,
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 25),
+                  child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text(
+                          'Bio',
+                          style: TextStyle(
+                              fontSize: 18, fontWeight: FontWeight.bold),
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        Text(
+                          profiles[0].about ?? 'Nothing to show..',
+                          textAlign: TextAlign.justify,
+                        )
+                      ]),
+                ),
               ],
             );
           }),

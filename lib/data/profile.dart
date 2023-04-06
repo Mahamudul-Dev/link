@@ -6,6 +6,8 @@ List<UserModel> profiles = <UserModel>[
       userName: 'Mohammad Jashim Akbar',
       userEmail: 'jashim@gmail.com',
       isSelected: false,
+      about:
+          "highly skilled web developer with over 10 years of experience in the field. He holds a Bachelor's degree in Computer Science from a top-tier university and has worked with various technologies such as HTML, CSS, JavaScript, PHP, and MySQL.Throughout his career, John has developed and maintained numerous websites and web applications for clients in various industries, including e-commerce, healthcare, and education. He is proficient in both front-end and back-end development, and has experience with popular frameworks such as React, Angular, and Laravel.",
       userProfilePic:
           'https://img.freepik.com/free-photo/portrait-white-man-isolated_53876-40306.jpg',
       gender: 'Male'),
