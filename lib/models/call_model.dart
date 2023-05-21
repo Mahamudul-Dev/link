@@ -2,7 +2,7 @@ class CallModel {
   final int uid;
   final String username;
   final String profilePic;
-  final String time;
+  final DateTime time;
   final String duration;
   final bool isVideo;
   final bool isOnline;

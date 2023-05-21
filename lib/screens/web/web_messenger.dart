@@ -18,7 +18,7 @@ class WebMessenger extends StatelessWidget {
               // chat search bar
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 5.0),
-                child: SearchBar(
+                child: CustomSearchBar(
                   onAddTap: () {},
                   onSearchTap: () {},
                 ),
@@ -26,7 +26,7 @@ class WebMessenger extends StatelessWidget {
             ],
           ),
           // chat list
-          Expanded(child: ChatList())
+          const Expanded(child: ChatList())
         ],
       ),
     );

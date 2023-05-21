@@ -6,6 +6,8 @@ import 'package:link/screens/mobile/friends_screen/friend_list_screen.dart';
 import 'package:link/styles/link_colors.dart';
 import 'package:link/widgets/rounded_icon_button.dart';
 import 'package:link/widgets/searchbar.dart';
+import 'package:timeago/timeago.dart' as timeago;
+
 
 class CallHistoryScreen extends StatelessWidget {
   const CallHistoryScreen() : super();
@@ -15,7 +17,7 @@ class CallHistoryScreen extends StatelessWidget {
     return Scaffold(
         appBar: PreferredSize(
             preferredSize: Size(MediaQuery.of(context).size.width, 45),
-            child: SearchBar(
+            child: CustomSearchBar(
               onAddTap: () {
                 Get.to(const FriendListScreen());
               },
@@ -50,7 +52,7 @@ class CallHistoryScreen extends StatelessWidget {
                       padding: EdgeInsets.symmetric(horizontal: 3.0),
                       child: Text('|'),
                     ),
-                    Text(calls[index].time)
+                    Text(timeago.format(calls[index].time))
                   ],
                 ),
                 trailing: calls[index].isVideo

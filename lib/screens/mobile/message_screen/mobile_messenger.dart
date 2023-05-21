@@ -4,19 +4,12 @@ import 'package:link/widgets/searchbar.dart';
 import 'package:link/widgets/user_card.dart';
 
 class MessengerScreen extends StatelessWidget {
-  const MessengerScreen() : super();
+  const MessengerScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        SearchBar(
-          onAddTap: () {},
-          onSearchTap: () {},
-        ),
-        const SizedBox(height: 200, child: UserCard()),
-        const Expanded(child: ChatList())
-      ],
+    return NestedScrollView(body: const ChatList(), headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) { return [const SliverAppBar(flexibleSpace: UserCard(), collapsedHeight: 200, expandedHeight: 200,), SliverPersistentHeader(delegate: , pinned: true,)]; },physics: const BouncingScrollPhysics(),
+      
     );
   }
 }

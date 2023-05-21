@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:link/styles/link_colors.dart';
 
-class SearchBar extends StatelessWidget {
-  var onAddTap;
-  var onSearchTap;
-  SearchBar({required this.onAddTap, required this.onSearchTap}) : super();
+
+class CustomSearchBar extends StatelessWidget {
+  const CustomSearchBar({Key? key, this.onAddTap, this.onSearchTap}) : super(key: key);
+
+  final void Function()? onAddTap;
+  final void Function()? onSearchTap;
 
   @override
   Widget build(BuildContext context) {

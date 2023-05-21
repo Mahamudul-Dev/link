@@ -1,4 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:emoji_picker_flutter/emoji_picker_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:link/controllers/message_controllers/p2pchat_controller.dart';
@@ -7,6 +8,8 @@ import 'package:link/screens/mobile/call_screen/call_screen.dart';
 import 'package:link/styles/link_colors.dart';
 import 'package:link/widgets/message_view.dart';
 
+import 'package:flutter/foundation.dart' as foundation;
+
 class P2PChatScreen extends StatelessWidget {
   final Chat chat;
   const P2PChatScreen({required this.chat}) : super();
@@ -14,7 +17,7 @@ class P2PChatScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final P2PChatController controller = Get.put(P2PChatController());
-    final TextEditingController editingController = TextEditingController();
+    
     return Scaffold(
       appBar: AppBar(
         title: Row(
@@ -77,8 +80,14 @@ class P2PChatScreen extends StatelessWidget {
           Expanded(child: MessageView(chat: chat)),
           Align(
             alignment: Alignment.bottomCenter,
-            child: buildBottomMessageBar(context, editingController),
-          )
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                buildBottomMessageBar(context, controller.messegeEditingController),
+                bottomEmojiPicker()
+              ],
+            )
+          ),
         ],
       ),
     );
@@ -113,8 +122,8 @@ Widget buildProfileSheet(Chat chat) {
         padding: const EdgeInsets.symmetric(horizontal: 20.0),
         child: Column(
           children: [
-            Row(
-              children: const [
+            const Row(
+              children: [
                 Text(
                   'About: ',
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
@@ -274,3 +283,43 @@ Widget buildBottomMessageBar(
     ],
   );
 }
+
+
+// imoji picker ----------->
+Widget bottomEmojiPicker(){
+  return EmojiPicker(
+    onBackspacePressed: () {
+        // Do something when the user taps the backspace button (optional)
+        // Set it to null to hide the Backspace-Button
+    },
+    //textEditingController: textEditionController, // pass here the same [TextEditingController] that is connected to your input field, usually a [TextFormField]
+    config: Config(
+        columns: 7,
+        emojiSizeMax: 32 * (foundation.defaultTargetPlatform == TargetPlatform.iOS ? 1.30 : 1.0), // Issue: https://github.com/flutter/flutter/issues/28894
+        verticalSpacing: 0,
+        horizontalSpacing: 0,
+        gridPadding: EdgeInsets.zero,
+        initCategory: Category.RECENT,
+        bgColor: const Color(0xFFF2F2F2),
+        indicatorColor: Colors.blue,
+        iconColor: Colors.grey,
+        iconColorSelected: Colors.blue,
+        backspaceColor: Colors.blue,
+        skinToneDialogBgColor: Colors.white,
+        skinToneIndicatorColor: Colors.grey,
+        enableSkinTones: true,
+        showRecentsTab: true,
+        recentsLimit: 28,
+        noRecents: const Text(
+          'No Recents',
+          style: TextStyle(fontSize: 20, color: Colors.black26),
+          textAlign: TextAlign.center,
+        ), // Needs to be const Widget
+        loadingIndicator: const SizedBox.shrink(), // Needs to be const Widget
+        tabIndicatorAnimDuration: kTabScrollDuration,    
+        categoryIcons: const CategoryIcons(),
+        buttonMode: ButtonMode.MATERIAL,
+    ),
+);
+}
+

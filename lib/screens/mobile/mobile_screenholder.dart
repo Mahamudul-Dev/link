@@ -247,7 +247,8 @@ class _MobileScreenHolderState extends State<MobileScreenHolder> {
                       color: Colors.white,
                       activeColor: Colors.white,
                       tabBackgroundColor: slateGrayTransparent,
-                      padding: const EdgeInsets.all(18.0),
+                      padding: const EdgeInsets.all(15.0),
+                      style: GnavStyle.google,
                       gap: 8,
                       onTabChange: (index) {
                         return setState(() {

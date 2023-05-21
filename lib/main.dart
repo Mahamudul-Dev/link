@@ -11,12 +11,13 @@ import 'responsive/responsive_layout.dart';
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   CachedNetworkImage.logLevel = CacheManagerLogLevel.debug;
-  SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
+  
+  SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(systemNavigationBarColor: charcoal));
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp() : super();
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
